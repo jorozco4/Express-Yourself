@@ -1,9 +1,9 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
+import React from "react";
+import { useQuery } from "@apollo/client";
 
-import ProfileList from '../components/ProfileList';
+import ProfileList from "../components/ProfileList";
 
-import { QUERY_PROFILES } from '../utils/queries';
+import { QUERY_PROFILES } from "../utils/queries";
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_PROFILES);
@@ -18,7 +18,7 @@ const Home = () => {
           ) : (
             <ProfileList
               profiles={profiles}
-              title="Here's the current roster of friends..."
+              title="People who have expressed themselves..."
             />
           )}
         </div>
